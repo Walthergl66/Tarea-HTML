@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Calculadora</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script type="text/javascript">
+        function Menu() {
+            var Op = parseInt(prompt("Bienvenido a mi calculadora\n\n"
+                + "1 Suma:\n"
+                + "2 Resta:\n"
+                + "3 Multiplicación:\n"
+                + "4 División:\n"
+                + "5 Salir:\n"));
+
+            switch (Op) {
+                case 1:
+                    suma();
+                    break;
+                case 2:
+                    Resta();
+                    break;
+                case 3:
+                    Multiplicacion();
+                    break;
+                case 4:
+                    Division();
+                    break;
+                case 5:
+                    alert("Saliendo de la calculadora.");
+                    return; 
+                default:
+                    alert("Opción no válida.");
+            }
+            Menu(); 
+        }
+
+        function suma() {
+            alert("Ha seleccionado la opción suma");
+            var V1 = parseInt(prompt("Ingrese el primer valor: "));
+            var V2 = parseInt(prompt("Ingrese el segundo valor: "));
+            var R = V1 + V2;
+            alert("La Suma de: " + V1 + " + " + V2 + " Es: " + R);
+        }
+
+        function Resta() {
+            alert("Ha seleccionado la opción Resta");
+            var V1 = parseInt(prompt("Ingrese el primer valor: "));
+            var V2 = parseInt(prompt("Ingrese el segundo valor: "));
+            var R = V1 - V2;
+            alert("La Resta de: " + V1 + " - " + V2 + " Es: " + R);
+        }
+
+        function Multiplicacion() {
+            alert("Ha seleccionado la opción Multiplicación");
+            var V1 = parseInt(prompt("Ingrese el primer valor: "));
+            var V2 = parseInt(prompt("Ingrese el segundo valor: "));
+            var R = V1 * V2;
+            alert("La Multiplicación de: " + V1 + " * " + V2 + " Es: " + R);
+        }
+
+        function Division() {
+            alert("Ha seleccionado la opción División");
+            var V1 = parseInt(prompt("Ingrese el primer valor: "));
+            var V2 = parseInt(prompt("Ingrese el segundo valor: "));
+            if (V2 === 0) {
+                alert("Error: No se puede dividir entre cero.");
+            } else {
+                var R = V1 / V2;
+                alert("La División de: " + V1 + " / " + V2 + " Es: " + R);
+            }
+        }
+
+        Menu();
+    </script>
+</body>
+</html>
+
+
